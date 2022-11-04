@@ -153,21 +153,21 @@ $(function() {
 // });
 
 // TASK 3.5
-$(function() {
-    $('.top-nav').mouseover(function() {
-        $(".down").slideUp();
-        $('.top-nav').mouseout(function() {
-            $(".down").slideDown();
-        });
-    });
-});
+// $(function() {
+//     $('.top-nav').mouseover(function() {
+//         $(".down").slideUp();
+//         $('.top-nav').mouseout(function() {
+//             $(".down").slideDown();
+//         });
+//     });
+// });
 
 // TASK 3.7
-$(function() {
-    $('#p').click(function() {
-        $(".head-moto-img").slideUp(2000);
-    });
-});
+// $(function() {
+//     $('#p').click(function() {
+//         $(".head-moto-img").slideUp(2000);
+//     });
+// });
 
 //THE END THREE TASK//
 // TASK 4.1
@@ -175,16 +175,17 @@ $(function() {
     $('.w').click(function() {
         alert(this.outerHTML);
     });
-
-    //  TASK 4.2
-    // $(function() {
-    //     $(document).ready(function() {
-    //         const value = document.querySelector('#email').value;
-    //         alert(value);
-    //     });
-    // });
-
 });
+
+//  TASK 4.2
+// $(function() {
+//     $(document).ready(function() {
+//         const value = document.querySelector('#email').value;
+//         alert(value);
+//     });
+// });
+
+
 // TASK 4.3
 $(function() {
     $('.link-moto').click(function() {
@@ -241,21 +242,29 @@ $(function() {
     });
 });
 
-// TASK 5.1 ВИКОНАНО В HTML CODES  РОЗКОМЕНТУВАТИ //
+// TASK 5.1
+// $(function() {
+//     $("#about-moto").addClass('new');
+// });
 
-// TASK 5.2 ВИКОНАНО В HTML CODES // 
-
-// TASK 5.3 ВИКОНАНО В HTML CODES //
+// TASK 5.3
+$(function() {
+    $(".active").addClass('svitlo');
+});
 
 // TASK 5.4 
 // $(function() {
-
 //     $("#img_1, #img_2, #img_3, #img_4").click(function() {
-
 //         clone = $(this).clone()
 //         clone.appendTo('.koshik-wrapper')
 //         clone.AddClass('full-koshik')
+//     });
+// });
 
+// TASK 5.5
+// $(function() {
+//     $("#img_1, #img_2, #img_3, #img_4").click(function() {
+//         $(this).remove().clone().appendTo('.containers').parent().removeClass('koshik-wrapper').addClass('full-koshik')
 //     });
 // });
 
@@ -266,21 +275,30 @@ $(function() {
 //     })
 // });
 
-// TASK 6.5
-$(document).ready(function() {
-    var a = false;
-    $img = $('#img_1')
+// TASK 6.2
+// $(document).ready(function() {
+//     const change_width = (obj, size) => {
+//         $(obj).css({
+//             "width": size,
+//             "max-width": size,
+//         });
+//     }
+//     change_width('#img_1, #img_2, #img_3, #img_4', 250);
+// });
 
-    $('#img_1').click(function() {
-        if (a) {
-            $img.animate({ width: "130px", height: "100px" }, 100);
-            a = false;
+// TASK 6.5
+$(function() {
+    $('img').on('click', function() {
+        $(this).toggleClass('expose');
+
+        if ($(this).hasClass('expose')) {
+            $(this).animate({ width: "100%", height: "100%" }, 100);
         } else {
-            $img.animate({ width: "100%", height: "100%" }, 100);
-            a = true;
+            $(this).animate({ width: "100px", height: "90px" }, 100);
         }
     });
 });
+
 
 // TASK 6.6 
 // $(function() {
@@ -292,6 +310,12 @@ $(document).ready(function() {
 //     });
 // });
 
+
+// TASK 7.1
+// $(function() {
+//     $('.header h1').css('background', 'yellow');;
+// });
+
 // TASK 7.3
 $(function() {
     $('#bag').prop('checked', true);
@@ -300,4 +324,9 @@ $(function() {
 // TASK 7.4
 $(function() {
     $('#inch_yes').prop('checked', true);
+});
+
+// TASK 7.6
+$(function() {
+    $('#radio').css('background', 'red');;
 });
